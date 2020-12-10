@@ -1,30 +1,42 @@
 ---
-title: "Report"
+title: "The Relationship Between Modern Literacy Levels and Income Per Capita Based on Proximity to Jesuit Mission Sites"
 author: "Arshnoor Kaur Gill"
 date: "09/12/2020"
-output: html_document
+output: pdf_document
+tags: ["regression", "plot"]
+abstract: "In this paper we attempt to reproduce 'Human Capital Transmission, Economic Persistance and Culture in South America' by Felipe Valencia Caicedo. We found that there is a 10% increase in modern literacy levels and a 0.2 log increase in the income per capita if one lives in a municipality 100 km closer to a Jesuit mission site in Brazil, Paraguay and Argentina. This suggests that investment in a community may lead to a longterm development of the prosperity of a community, and that the impact of missionaries on communities is a complex relation that deserves further research. A weakness is that through using Jesuit mission sites as proxies for sources of investment in this community, a false linkage could be created between the presence of missionaries and economic and social development in a municipality."
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduction
+The activities of missionaries in developing countries is a hotly contested issue in our modern context. Though all religions have delegates who attempt to spread their faith, this is most associated with the Christian religion, especially in times of colonial expansion. Though some believe that the work of building physical infastructure such as schools and hospitals that missionaries associate themselves with justifies the presence of these religious representatives in developing nations, there is the other perspective that missionary work is simply a modern by-product of imperialism which ultimately results in hurting Indigenous populations through unintended consequences of contact, such as contracted disease. Some countries like Nepal have in fact labelled this practice illegal (Luckhurst). What this reproduction of this paper intends to do is examine the effect of Jesuit missions in Argentina, Brazil and Paraguay, in a set of missions called the "reductions" before the Jesuits were then ordered out of South America by the then king of Spain, in order to examine the longlasting effects on the local populations.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The way these findings were derived was through the use of a standard linear regression, the distance from Jesuit mission sites in kiometers used as the explanatory variable to attempt to predict (a) the modern literacy percentage of the population 15 and older as a percentage, and (b) the log of the income per capita of a municipality. The data is from the initial report published by Valencia Caicedo, which from him was collected from several sourses including: the national censes from Brazil, Paraguay and Argintina, as well as Jesuit Archives and firsthand correspondances from Jesuit officials in Rome (Valencia Caicedo). The data seems to indicate that being 100 kilometers farther from a Jesuit mission site increases illiteracy in the population 15 or over by approximately 10% in a municipality. Moreover, this reproduction of the paper validates the initial finding that being 100 kilometers farther from a mission site decreases income per capita by 0.2 log in 2000.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+The outline of the paper is as follows. In the Data section, I further with reference to Valencia Caicedo's paper discuss the methodology behind the data collection utilized in this report. Within this section, I deliberate on the strengths and purposes of the data for the purpose of this regression analysis, as well as touch on summary statistics for variables of interest, such as modern literacy in 2020. In the following section, Model, I lay out the regression equation that I will be utilize for the OLS analysis. In the Results section, there will be graphical and tabulated representation of the two relationships being investigated, and in the Discussion section the implicationa and legitimacy of the results in terms of signification will be deliberated, along with strengths and weaknesses of this reproduction. The most inherent of the weaknesses is that there may be a missing cofounder that creates a false relationship between the presence of Jesuit mission sites and literacy levels or economic prosperity of a location. For instance, it may not be anything in particular regarding the Jesuit missions but rather just any investment regardless of source in a community in terms of external aide or money that may lead to eventual relative prosperity. However, on the other hand, a key strength of the data is innovatively simplifying complex geographical calculations into a specific numerical variable, the difference from a mission site, allows for straight-forward and easily interpretable analysis.
 
-```{r cars}
-summary(cars)
-```
+## Data
 
-## Including Plots
+## Model
 
-You can also embed plots, for example:
+## Results
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Discussion
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## References
+- JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and
+  Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone
+  (2020). rmarkdown: Dynamic Documents for R. R package version 2.3. URL
+  https://rmarkdown.rstudio.com.
+- Luckhurst, Toby (2018). John Allen Chau: Do missionaries help or harm? BBC News, 
+  https://www.bbc.com/news/world-46336355.
+- R Core Team (2019). R: A language and environment for statistical computing. R
+  Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+- Valencia Caicedo, Felipe, 2018, "Replication Data for: 'The Mission: Human Capital 
+  Transmission, Economic Persistence, and Culture in South America'", 
+  https://doi.org/10.7910/DVN/ML1155, Harvard Dataverse, V1
+- Yihui Xie (2019). knitr: A General-Purpose Package for Dynamic Report Generation in R.
+  R package version 1.26.
