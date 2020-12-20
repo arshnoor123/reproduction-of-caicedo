@@ -17,8 +17,10 @@
 # Output files from R CMD check
 /*.Rcheck/
 
-# Files in the input folder.
-/Inputs/*
+# ignore input files
+*.dta
+*.png
+*.do
 
 # RStudio files
 .Rproj.user/

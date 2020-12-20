@@ -20,20 +20,20 @@ library(haven)
 library(tidyverse)
 
 figureii <- read_dta("./Inputs/Figures/Figure II.dta")
-figurev <- read_dta("./Inputs/Figures/Figure V.dta")
+#figurev <- read_dta("./Inputs/Figures/Figure V.dta")
 figureiiii_iv <- read_dta("./Inputs/Figures/Figures IIII IV.dta")
 
-ipums_brazil <- read_dta("./Inputs/Tables/IPUMS Brazil.dta")
-ipums_argentina <- read_dta("./Inputs/Tables/IPUMS Argentina.dta")
-ipums_paraguay <- read_dta("./Inputs/Tables/IPUMS Paraguay.dta")
+#ipums_brazil <- read_dta("./Inputs/Tables/IPUMS Brazil.dta")
+#ipums_argentina <- read_dta("./Inputs/Tables/IPUMS Argentina.dta")
+#ipums_paraguay <- read_dta("./Inputs/Tables/IPUMS Paraguay.dta")
 
-argentina_1895 <- read_dta("./Inputs/Tables/Argentina 1895.dta")
-brazil_1920 <-read_dta("./Inputs/Tables/Brazil 1920.dta")
+#argentina_1895 <- read_dta("./Inputs/Tables/Argentina 1895.dta")
+#brazil_1920 <-read_dta("./Inputs/Tables/Brazil 1920.dta")
 
-arg_bra_par_spatial <- read_dta("./Inputs/Tables/Argentina Brazil Paraguay Spatial.dta")
+#arg_bra_par_spatial <- read_dta("./Inputs/Tables/Argentina Brazil Paraguay Spatial.dta")
 literacy <- read_dta("./Inputs/Tables/Literacy Argentina Brazil Paraguay.dta")
 income <- read_dta("./Inputs/Tables/Income Brazil Paraguay Spatial.dta")
-poverty <- read_dta("./Inputs/Tables/Poverty Argentina Paraguay Spatial.dta")
+#poverty <- read_dta("./Inputs/Tables/Poverty Argentina Paraguay Spatial.dta")
 ```
 
 # Introduction
