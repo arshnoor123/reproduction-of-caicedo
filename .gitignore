@@ -19,6 +19,8 @@
 
 # ignore input files
 *.dta
+*.gph
+*.do
 
 # RStudio files
 .Rproj.user/
