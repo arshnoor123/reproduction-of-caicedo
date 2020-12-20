@@ -19,9 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 library(haven)
 library(tidyverse)
 
-figureii <- read_dta("./Inputs/Figures/Figure II.dta")
-#figurev <- read_dta("./Inputs/Figures/Figure V.dta")
-figureiiii_iv <- read_dta("./Inputs/Figures/Figures IIII IV.dta")
+figureii <- read_dta("./Inputs/Untitled/Figures/Figure II.dta")
+#figurev <- read_dta("./Inputs/Untitled/Figures/Figure V.dta")
+figureiiii_iv <- read_dta("./Inputs/Untitled/Figures/Figures IIII IV.dta")
 
 #ipums_brazil <- read_dta("./Inputs/Tables/IPUMS Brazil.dta")
 #ipums_argentina <- read_dta("./Inputs/Tables/IPUMS Argentina.dta")
@@ -31,9 +31,9 @@ figureiiii_iv <- read_dta("./Inputs/Figures/Figures IIII IV.dta")
 #brazil_1920 <-read_dta("./Inputs/Tables/Brazil 1920.dta")
 
 #arg_bra_par_spatial <- read_dta("./Inputs/Tables/Argentina Brazil Paraguay Spatial.dta")
-literacy <- read_dta("./Inputs/Tables/Literacy Argentina Brazil Paraguay.dta")
+literacy <- read_dta("./Inputs/Untitled/Tables/Literacy Argentina Brazil Paraguay.dta")
 income <- read_dta("./Inputs/Tables/Income Brazil Paraguay Spatial.dta")
-#poverty <- read_dta("./Inputs/Tables/Poverty Argentina Paraguay Spatial.dta")
+#poverty <- read_dta("./Inputs/Untitled/Tables/Poverty Argentina Paraguay Spatial.dta")
 ```
 
 # Introduction
