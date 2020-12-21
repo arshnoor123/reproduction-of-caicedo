@@ -307,22 +307,22 @@ Weaknesses of this data from the outset have been that the observations from dif
 # References
 - Caicedo, Felipe Valencia, (2018). Replication Data for: 'The Mission: Human Capital 
   Transmission, Economic Persistence, and Culture in South America', 
-  https://doi.org/10.7910/DVN/ML1155, Harvard Dataverse, V1
-- Felipe Valencia, Caicedo, (2018). The Mission: Human Capital Transmission, Economic 
+  https://doi.org/10.7910/DVN/ML1155, Harvard Dataverse, V1.
+- Caicedo, Felipe Valencia (2018). The Mission: Human Capital Transmission, Economic 
   Persistence, and Culture in South America, The Quarterly Journal of Economics, Volume 134, 
-  Issue 1, February 2019, Pages 507–556, https://doi.org/10.1093/qje/qjy024
+  Issue 1, February 2019, Pages 507–556, https://doi.org/10.1093/qje/qjy024.
 - "Continuous National Household Sample Survey - Continuous PNAD." IBGE, 
   https://www.ibge.gov.br/en/statistics/social/population/16833-monthly-dissemination-pnadc1.ht
   ml?=&t=o-que-e.
 - Hadley Wickham and Evan Miller (2020). haven: Import and Export 'SPSS', 'Stata' and
-  'SAS' Files. R package version 2.3.1. https://CRAN.R-project.org/package=haven
+  'SAS' Files. R package version 2.3.1. https://CRAN.R-project.org/package=haven.
 - JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and
   Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone
   (2020). rmarkdown: Dynamic Documents for R. R package version 2.3. URL
   https://rmarkdown.rstudio.com.
 - Luckhurst, Toby (2018). John Allen Chau: Do missionaries help or harm? BBC News, 
   https://www.bbc.com/news/world-46336355.
-- "OECD Assessment of the Statistical System of Argentina and Key Statistics of Argentina." 
+- OECD Assessment of the Statistical System of Argentina and Key Statistics of Argentina (2019). 
   OECD, http://www.oecd.org/statistics/good-practice-toolkit/countryassessments/OECD-Assessment
   -of-the-Statistical-System-and-Key-Statistics-of-Argentina.pdf.
 - R Core Team (2019). R: A language and environment for statistical computing. R
