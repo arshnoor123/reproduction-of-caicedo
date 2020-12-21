@@ -21,6 +21,7 @@
 *.dta
 *.gph
 *.do
+*.csv
 
 # RStudio files
 .Rproj.user/

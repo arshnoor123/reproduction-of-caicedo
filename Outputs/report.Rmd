@@ -21,12 +21,9 @@ knitr::opts_chunk$set(echo = TRUE, fig.pos = 'H')
 library(haven)
 library(tidyverse)
 
-# datasets from Inputs needed for analysis
-figureii <- read_dta("./Inputs/Data/Figures/Figure II.dta")
-figureiiii_iv <- read_dta("./Inputs/Data/Figures/Figures IIII IV.dta")
-
-literacy <- read_dta("./Inputs/Data/Tables/Literacy Argentina Brazil Paraguay.dta")
-income <- read_dta("./Inputs/Data/Tables/Income Brazil Paraguay Spatial.dta")
+# datasets from Outputs needed for analysis
+literacy <- read_csv("./literacy.csv")
+income <- read_csv("./income.csv")
 ```
 
 # Introduction
@@ -173,10 +170,12 @@ Here, you can see two different scatterplots: one that compares the distance fro
 
 ```{r scatter1, fig.cap="Scatterplot of Distance from Jesuit Mission and Income R$", echo = FALSE}
 
+# Change variables for comprehension
 temp <- income %>%
   mutate(country = ifelse(country == "BRA", "Brazil", "Paraguay")) %>%
   filter(distmiss < 225)
 
+# Scatterplot for Ln(Income) and Distance from Mission
 scatter1 <- ggplot(data = temp, aes(x = distmiss, y = lnincome, color = country)) +
   geom_point() + 
   labs(x = "Distance from Jesuit Mission (km)",
@@ -188,12 +187,15 @@ scatter1 <- ggplot(data = temp, aes(x = distmiss, y = lnincome, color = country)
 scatter1
 ```
 
-```{r scatter2, fig.cap="Scatterplot of Distance from Jesuit Mission and Literacy Rate", echo= FALSE}
-figureii <- figureii %>%
+```{r scatter2, fig.cap="Scatterplot of Distance from Jesuit Mission and Literacy Rate", echo= FALSE, warning =FALSE}
+
+# Change variables for comprehension
+literacy <- literacy %>%
   mutate(country = ifelse(country == "BRA", "Brazil",
                           ifelse(country == "Paraguay", "Paraguay", "Argentina")))
 
-ggplot(figureii, aes(x = distmiss, y = literacy, color = country)) + 
+# Scatterplot for Literacy and Distance from Mission
+ggplot(literacy, aes(x = distmiss, y = literacy, color = country)) + 
   geom_point() + 
   labs(x = "Distance from Jesuit Mission (km)",
        y = "Literacy Rate (%)",
@@ -207,6 +209,7 @@ Moreover, Table 4: Comparative Table of Relevant Statistics of Models, compares 
 
 ```{r model, echo=FALSE}
 
+# Matrix of values from modelcoef.csv
 regtable1 <- matrix(
   c("91.724335", "2.712782", "< 2e-16",
     "-0.004854", "0.003417", "0.155964",
@@ -226,10 +229,13 @@ dimnames(regtable1) <- list(
   c("Estimate (Beta Values)", "Standard Error", "P-Value for T-test")
 )
 
+# Create table
 knitr::kable(regtable1, caption = "Regression Analysis for Literacy Rate as Response", longtable = T)
 ```
 
 ```{r, echo=FALSE}
+
+# Matrix of values from modelcoef.csv
 regtable2 <- matrix(
   c("5.862e+00", "2.229e-01", "< 2e-16",
     "-1.249e-03", "3.135e-04", "0.155964",
@@ -248,11 +254,13 @@ dimnames(regtable2) <- list(
   c("Estimate (Beta Values)", "Standard Error", "P-Value for T-test")
 )
 
+# Create table
 knitr::kable(regtable2, caption = "Regression Analysis for Ln(Income) as Response", longtable = T)
-
 ```
 
 ```{r plot3, fig.cap="Comparative Table of Relevant Statistics of Models", echo=FALSE}
+
+# Matrix of values from modelcoef.csv and model2coefs.csv
 comparative <- matrix(
   c("0.0432", "0.87",
     "6.373e-05", "< 2.2e-16"),
@@ -266,6 +274,7 @@ dimnames(comparative) <- list(
   c("Literacy Rate", "Ln(Income)")
 )
 
+# Create comparative table
 knitr::kable(comparative, caption = "Comparative Table of Relevant Statistics of Models", longtable = T)
 ```
 
@@ -294,6 +303,12 @@ There are crucial strengths and weaknesses to the analysis conducted. In terms o
 Weaknesses of this data from the outset have been that the observations from different countries come from different years. Though the range from 2000 to 2002 may seem small for the literacy variable, it is still a sizeable difference and creates a degree of uncertainty within the data. This is further dramatic with income, which has a larger year range and also excludes Argentina. It is interesting to note that the further away a municipality was from a Jesuit mission in Brazil, it seemed to increase the literacy rate, suggesting that perhaps the story is not as simple as Jesuit missions increasing human capital.
 
 # References
+- Caicedo, Felipe Valencia, 2018, "Replication Data for: 'The Mission: Human Capital 
+  Transmission, Economic Persistence, and Culture in South America'", 
+  https://doi.org/10.7910/DVN/ML1155, Harvard Dataverse, V1
+- Caicedo, Felipe Valencia, 2018, "The Mission: Human Capital Transmission, 
+  Economic Persistence, and Culture in South America", 
+  https://economics.harvard.edu/files/economics/files/ms25323.pdf, Harvard Dataverse, V1
 - "Continuous National Household Sample Survey - Continuous PNAD." IBGE, 
   https://www.ibge.gov.br/en/statistics/social/population/16833-monthly-dissemination-pnadc1.ht
   ml?=&t=o-que-e.
@@ -310,9 +325,6 @@ Weaknesses of this data from the outset have been that the observations from dif
   -of-the-Statistical-System-and-Key-Statistics-of-Argentina.pdf.
 - R Core Team (2019). R: A language and environment for statistical computing. R
   Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
-- Valencia Caicedo, Felipe, 2018, "Replication Data for: 'The Mission: Human Capital 
-  Transmission, Economic Persistence, and Culture in South America'", 
-  https://doi.org/10.7910/DVN/ML1155, Harvard Dataverse, V1
 - Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software,
   4(43), 1686, https://doi.org/10.21105/joss.01686
 - Yihui Xie (2019). knitr: A General-Purpose Package for Dynamic Report Generation in R.

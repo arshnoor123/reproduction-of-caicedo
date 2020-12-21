@@ -19,7 +19,10 @@ income <- read_dta("./Inputs/Data/Tables/Income Brazil Paraguay Spatial.dta")
 model <- lm(literacy ~ distmiss + country + coast + river + preci + alti, data = literacy)
 model2 <- lm(lnincome ~ distmiss + country + coast + river + preci + alti, data = income)
 
-# Create summary outpouts of the linear models and save them to outputs.
+# Create summary outputs of the linear models and csv versions of the dta files, save them to outputs.
+write.csv(literacy, "./Outputs/literacy.csv")
+write.csv(income, "./Outputs/income.csv")
+
 beta <- coef(summary(model))
 write.csv(beta, "./Outputs/modelcoef.csv")
 
