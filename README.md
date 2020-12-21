@@ -4,8 +4,8 @@ This repo has code and data for the reproduction of 'Human Capital Transmission,
 
 The main sections of this report is:
 - The inputs folder. Inside the inputs folder, you should download the data from https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ML1155 and store the folder `Data` directly inside the `Inputs` folder.
-- The outputs folder, which contains the output of the linear regression model information.
-- The scripts folder, which creates the output CSV files.
+- The `Outputs` folder, which contains the output of the linear regression model information.
+- The `Scripts` folder, which creates the output CSV files.
 
 
 The outputs folder has files modified from the inputs as well as supporting detail and the report itself. Included are:
@@ -15,4 +15,4 @@ The outputs folder has files modified from the inputs as well as supporting deta
 
 The scripts inside the script folder, which use the inputs to create files that can be utilized in the report, are:
 
-- 01_data_cleaning-and-modelling.R
+- `01_data_cleaning-and-modelling.R`
