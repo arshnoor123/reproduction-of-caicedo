@@ -158,7 +158,7 @@ In which:
 - `altitude` is altitude of an area by cm.
 - `error` refers to random error within the OLS regression.
 
-OLS regression is appropriate in this case because the response variable in both equations is numerical and continuous, in contrast to other relations we've explored in the couse where, because the response is a dummy variable, a logistic regression fit better. That being said, there may be an issue with regard to over-fitting or statistically insignificant predictor variables given all the geographic data that is being accounted for, so I'll examine the residual plots in order to ensure there isn't a persistent pattern that points to a systemic rather than random error in the model.
+OLS regression is appropriate in this case because the response variable in both equations is numerical and continuous, in contrast to other relations we've explored in the couse where, because the response is a dummy variable, a logistic regression fit better. That being said, there may be an issue with regard to over-fitting or statistically insignificant predictor variables given all the geographic data that is being accounted for.
 
 Particular features of the model to note are that the state effects are categorical and thus will have a level effect on the final regression. Distance from the river and coast, as well as precipitation, will affect the overall slope of the linear trend as it is numerical an the effect is measured on a per-unit basis. 
 
