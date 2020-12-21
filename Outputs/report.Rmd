@@ -305,12 +305,12 @@ There are crucial strengths and weaknesses to the analysis conducted. In terms o
 Weaknesses of this data from the outset have been that the observations from different countries come from different years. Though the range from 2000 to 2002 may seem small for the literacy variable, it is still a sizeable difference and creates a degree of uncertainty within the data. This is further dramatic with income, which has a larger year range, from 2000 and 2008, and also excludes Argentina. 2008 is particularly important because as a year it is when there is a global recession—from the looks of this data, it is very hard to tell how much of the disparity between Brazil and Paraguay's observations is due to state effects versus the effect that the year has on the data. It is interesting to note that the further away a municipality was from a Jesuit mission in Brazil, it seemed to increase the literacy rate, suggesting that perhaps the story is not as simple as Jesuit missions increasing human capital.
 
 # References
-- Caicedo, Felipe Valencia, 2018, "Replication Data for: 'The Mission: Human Capital 
-  Transmission, Economic Persistence, and Culture in South America'", 
+- Caicedo, Felipe Valencia, (2018). Replication Data for: 'The Mission: Human Capital 
+  Transmission, Economic Persistence, and Culture in South America', 
   https://doi.org/10.7910/DVN/ML1155, Harvard Dataverse, V1
-- Caicedo, Felipe Valencia, 2018, "The Mission: Human Capital Transmission, 
-  Economic Persistence, and Culture in South America", 
-  https://economics.harvard.edu/files/economics/files/ms25323.pdf, Harvard Dataverse, V1
+- Felipe Valencia, Caicedo, (2018). The Mission: Human Capital Transmission, Economic 
+  Persistence, and Culture in South America, The Quarterly Journal of Economics, Volume 134, 
+  Issue 1, February 2019, Pages 507–556, https://doi.org/10.1093/qje/qjy024
 - "Continuous National Household Sample Survey - Continuous PNAD." IBGE, 
   https://www.ibge.gov.br/en/statistics/social/population/16833-monthly-dissemination-pnadc1.ht
   ml?=&t=o-que-e.
